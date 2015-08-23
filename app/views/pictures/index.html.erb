@@ -1,0 +1,27 @@
+  <div class="row">
+    <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
+    <h1><%= @album.title %></h1>    
+  </div>
+
+  <div class="row">
+    <% @pictures.each do |picture| %>
+        <div class="col-md-3 portfolio-item">
+          <%= link_to image_tag(picture.asset.url(:medium)), album_pictures_path(@album, picture) %>
+          
+          <% if picture.name? %>
+            <%= picture.name %>
+          <% end %>
+          <br>
+
+          <% if picture.description? %>
+            <%= picture.description %>
+          <% end %>
+          <br>
+
+          <%= link_to 'Show', album_picture_path(@album, picture) %>
+          <%= link_to 'Edit', edit_album_picture_path(@album, picture) %>
+          <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' } %>        
+        </div>
+    <% end %>
+  </div>
+

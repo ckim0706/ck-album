@@ -17,11 +17,14 @@ gem 'devise'
 gem 'pg'
 gem 'pundit'
 gem 'simple_form'
+gem 'aws-sdk', '~> 1.6'
+gem 'paperclip'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'binding_of_caller', '~> 0.7.2'
 end
 group :development, :test do
   gem 'factory_girl_rails'
@@ -37,3 +40,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+gem 'dotenv-rails', :groups => [:development, :test]
