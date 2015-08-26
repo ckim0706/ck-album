@@ -1,5 +1,8 @@
   <div class="row">
-    <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
+    <% if user_signed_in? %>
+      <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
+    <% end %>
+
     <h1><%= @album.title %></h1>    
   </div>
 
@@ -18,9 +21,11 @@
           <% end %>
           <br>
 
-          <%= link_to 'Show', album_picture_path(@album, picture) %>
-          <%= link_to 'Edit', edit_album_picture_path(@album, picture) %>
-          <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' } %>        
+          <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_album_picture_path(@album, picture) %>
+            <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' } %>  
+          <% end %>
+
         </div>
     <% end %>
   </div>

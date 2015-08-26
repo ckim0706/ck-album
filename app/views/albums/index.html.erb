@@ -1,6 +1,8 @@
 <div class="row">
   <h1>Listing Albums</h1>
-  <%= link_to 'New Album', new_album_path, class: "btn btn-primary" %>
+    <% if user_signed_in? %>
+      <%= link_to 'New Album', new_album_path, class: "btn btn-primary" %>
+    <% end %>
 </div>
 
 <br>
@@ -15,8 +17,11 @@
         <% end %>
         <br>
         
-        <%= link_to 'Edit', edit_album_path(album) %>
-        <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %>        
+
+        <% if user_signed_in? %>
+          <%= link_to 'Edit', edit_album_path(album) %>
+          <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %> 
+        <% end %>
       </div>
   <% end %>
 </div>
