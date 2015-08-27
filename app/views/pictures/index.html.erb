@@ -1,9 +1,8 @@
-  <div class="row">
+  <div class="page-header">
+    <h1><%= @album.title %></h1>
     <% if user_signed_in? %>
       <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
-    <% end %>
-
-    <h1><%= @album.title %></h1>    
+    <% end %>   
   </div>
 
   <div class="row">
