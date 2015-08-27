@@ -54,11 +54,11 @@ class PicturesController < ApplicationController
 
   private   
     def set_picture
-      @picture = Picture.find(params[:id])
+      @picture = Picture.friendly.find(params[:id])
     end
 
     def find_album
-      @album = Album.find(params[:album_id])
+      @album = Album.friendly.find(params[:album_id])
     end
 
     def picture_params

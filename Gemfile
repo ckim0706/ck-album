@@ -7,11 +7,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pg'
@@ -19,6 +14,17 @@ gem 'pundit'
 gem 'simple_form'
 gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
+gem 'friendly_id', '~> 5.1.0'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+end
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
@@ -26,19 +32,16 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'binding_of_caller', '~> 0.7.2'
 end
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'rspec-rails'
-end
-group :production do
-  gem 'unicorn'
-end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :production do
+  gem 'unicorn'
 end
 
 gem 'dotenv-rails', :groups => [:development, :test]
