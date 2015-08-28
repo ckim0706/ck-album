@@ -23,6 +23,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -42,6 +43,5 @@ end
 
 group :production do
   gem 'unicorn'
+  gem 'rails_12factor'
 end
-
-gem 'dotenv-rails', :groups => [:development, :test]

@@ -8,7 +8,7 @@
   <div class="row">
     <% @pictures.each do |picture| %>
         <div class="col-md-3 portfolio-item">
-          <%= link_to image_tag(picture.asset.url(:medium)), album_pictures_path(@album, picture) %>
+          <%= link_to image_tag(picture.asset.url(:medium)), album_pictures_path(@album, picture), :class => "img-responsive" %>
           
           <% if picture.name? %>
             <%= picture.name %>
