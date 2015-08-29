@@ -1,15 +1,16 @@
-  <div class="page-header">
-    <h1><%= @album.title %></h1>
-    <% if user_signed_in? %>
-      <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
-    <% end %>   
-  </div>
+<div class="page-header">
+  <h1><%= @album.title %></h1>
+  <% if user_signed_in? %>
+    <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
+  <% end %>   
+</div>
 
-  <div class="row">
-    <% @pictures.each do |picture| %>
-        <div class="col-md-3 portfolio-item">
-          <%= link_to image_tag(picture.asset.url(:medium)), album_pictures_path(@album, picture), :class => "img-responsive" %>
-          
+<div class="row">
+  <% @pictures.each do |picture| %>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <%= link_to image_tag(picture.asset.url(:large)), album_pictures_path(@album, picture), :class => "img-responsive" %>
+        
+        <div class="picture-detail">
           <% if picture.name? %>
             <%= picture.name %>
           <% end %>
@@ -19,13 +20,13 @@
             <%= picture.description %>
           <% end %>
           <br>
-
-          <% if user_signed_in? %>
-            <%= link_to 'Edit', edit_album_picture_path(@album, picture) %>
-            <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' } %>  
-          <% end %>
-
         </div>
-    <% end %>
-  </div>
 
+        <% if user_signed_in? %>
+          <%= link_to 'Edit', edit_album_picture_path(@album, picture), :class => "btn btn-warning btn-xs" %>
+          <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs" %>  
+        <% end %>
+
+      </div>
+  <% end %>
+</div>
