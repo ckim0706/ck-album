@@ -3,6 +3,6 @@ class ContactMailer < ActionMailer::Base
 
   def contact_email(contact)
     @contact = contact
-    mail(to: ENV['gmail_username'], from: @contact.email, :subject => "Website Contact")
+    mail(to: ENV['GMAIL_USERNAME'], from: @contact.email, :subject => "Website Contact")
   end
 end
