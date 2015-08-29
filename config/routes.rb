@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :skip => :registration
   as :user do
-    get "/admin" => "devise/sessions#new"
+    get '/admin' => 'devise/sessions#new'
   end
+
+  get '/about' => 'pages#about'
 
   resources :contacts, only: [:new, :create]
 
