@@ -1,4 +1,15 @@
-// Place all the styles related to the pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.fancybox-nav {
+    width: 60px;       
+}
 
+.fancybox-nav span {
+    visibility: visible;
+}
+
+.fancybox-next {
+    right: -80px;
+}
+
+.fancybox-prev {
+    left: -80px;
+}

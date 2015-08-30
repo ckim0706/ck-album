@@ -8,25 +8,13 @@
 <div class="row">
   <% @pictures.each do |picture| %>
       <div class="col-md-4 col-sm-6 col-xs-12 picture">
-        <%= link_to image_tag(picture.asset.url(:large)), picture.asset.url(:large), class: "fancybox" %>
+        <%= link_to image_tag(picture.asset.url(:album)), picture.asset.url(:large), class: "fancybox", title: "#{picture.name}" %>
         
-        <div class="picture-detail">
-          <% if picture.name? %>
-            <%= picture.name %>
-          <% end %>
-          <br>
-
-          <% if picture.description? %>
-            <%= picture.description %>
-          <% end %>
-          <br>
-        </div>
-
+        <br>
         <% if user_signed_in? %>
           <%= link_to 'Edit', edit_album_picture_path(@album, picture), :class => "btn btn-warning btn-xs" %>
           <%= link_to 'Destroy', album_picture_path(@album, picture), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs" %>  
         <% end %>
-
       </div>
   <% end %>
 </div>
