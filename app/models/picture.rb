@@ -5,7 +5,7 @@ class Picture < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  has_attached_file :asset, styles: { large: "800x800>" }
+  has_attached_file :asset, styles: { large: "800x800>", medium: "300x300#" }
   # has_attached_file :asset, styles: { large: "800x800>", medium: "300x300>", small: " 260x180>", thumb: "80x80#" }
   validates_attachment_content_type :asset, content_type: /\Aimage\/.*\Z/
 end

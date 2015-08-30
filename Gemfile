@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
 gem 'friendly_id', '~> 5.1.0'
+gem 'fancybox2-rails', '~> 0.2.8'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug'
