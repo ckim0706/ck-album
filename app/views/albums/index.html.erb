@@ -10,7 +10,7 @@
   <% @albums.each do |album| %>
       <div class="col-md-4 col-sm-6 col-xs-12">
          <div class="thumbnail">
-        <%= link_to album_thumbnail(album), album_pictures_path(album) %>
+          <%= link_to album_thumbnail(album), album_pictures_path(album) %>
         
           <div class="caption">
             <% if album.title? %>

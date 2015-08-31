@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'friendly_id', '~> 5.1.0'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'jquery-turbolinks'
+gem "gretel"
 
 group :development, :test do
   gem 'byebug'

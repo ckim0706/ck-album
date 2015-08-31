@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= @album.title %></h1>
+  <% breadcrumb @album %>
   <% if user_signed_in? %>
     <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
   <% end %>   
