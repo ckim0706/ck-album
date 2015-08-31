@@ -18,6 +18,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'jquery-turbolinks'
 gem 'gretel'
+gem "autoprefixer-rails"
 
 group :development, :test do
   gem 'byebug'
