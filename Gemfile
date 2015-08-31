@@ -16,8 +16,8 @@ gem 'aws-sdk', '~> 1.6'
 gem 'paperclip'
 gem 'friendly_id', '~> 5.1.0'
 gem 'fancybox2-rails', '~> 0.2.8'
-gem 'gretel'
 gem 'jquery-turbolinks'
+gem 'gretel'
 
 group :development, :test do
   gem 'byebug'
