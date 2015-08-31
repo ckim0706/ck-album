@@ -1,9 +1,10 @@
-<div class="page-header">
-  <% breadcrumb @album %>
-  <% if user_signed_in? %>
+<% breadcrumb @album %>
+
+<% if user_signed_in? %>
+  <div class="page-header">
     <%= link_to 'Add Picture', new_album_picture_path(@album), class: "btn btn-primary" %>
-  <% end %>   
-</div>
+  </div>
+<% end %>   
 
 <div class="row">
   <% @pictures.each do |picture| %>

@@ -1,8 +1,8 @@
-<div class="page-header">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="page-header">
     <%= link_to 'New Album', new_album_path, class: "btn btn-primary" %>
-  <% end %> 
-</div>
+  </div>
+<% end %> 
 
 <br>
 

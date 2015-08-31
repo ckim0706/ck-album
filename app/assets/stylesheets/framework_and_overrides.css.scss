@@ -33,12 +33,6 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
-main {
-  @extend .container;
-  background-color: white;
-  padding-bottom: 80px;
-  width: 100%;
-  }
 section {
   @extend .row;
   margin-top: 20px;
@@ -80,6 +74,26 @@ section {
   @extend .btn-xs;
 }
 
+// Breadcrumb
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  list-style: none;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.breadcrumb li a {color: rgba(109, 110, 120, 1);}
+
+
+h4 {
+  margin: 5px 0px;
+  text-align: center;
+}
+
+// Vertical Nav bar
+
 .nav {
   background-color: white;
 }
@@ -90,8 +104,7 @@ section {
   padding-left: 20px;
   background-color: white;
 }
-  
-// Vertical Nav bar
+
 @media (min-width: 768px) {
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
@@ -111,5 +124,13 @@ section {
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  .container-fluid {
+    padding-right: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
