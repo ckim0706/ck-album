@@ -15,7 +15,7 @@ img {
   }
 
 .navbar-default .navbar-brand {
-  color: rgba(0, 0, 0, 0.69);
+  color: rgba(0, 0, 0, 0.69) !important;
 }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
@@ -112,6 +112,11 @@ h4 {
 }
 
 @media (min-width: 768px) {
+
+  .navbar-header {
+    float:none !important;
+  }
+
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
@@ -130,10 +135,6 @@ h4 {
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
-  }
-
-  span.navbar-brand {
-    margin-bottom: 20px;
   }
 
   .container-fluid {
