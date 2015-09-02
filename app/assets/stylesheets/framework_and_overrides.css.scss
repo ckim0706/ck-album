@@ -15,7 +15,7 @@ img {
   }
 
 .navbar-default .navbar-brand {
-  color: rgba(0, 0, 0, 0.69) !important;
+  color: rgba(0, 0, 0, 0.69);
 }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
@@ -93,7 +93,7 @@ section {
 .breadcrumb li a {color: rgba(109, 110, 120, 1);}
 
 
-h4 {
+h4, h5 {
   margin: 5px 0px;
   text-align: center;
 }
@@ -114,7 +114,7 @@ h4 {
 @media (min-width: 768px) {
 
   .navbar-header {
-    float:none !important;
+    float: none;
   }
 
   .sidebar-nav .navbar .navbar-collapse {
