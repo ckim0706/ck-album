@@ -14,11 +14,11 @@
         
           <div class="caption">
             <% if album.title? %>
-              <h4><%= album.title %> 
+              <h5><%= album.title %> 
                 <% if ( album.pictures.count > 1 ) %>
-                  ( <%= album.pictures.count %> images )</h4>
+                  ( <%= album.pictures.count %> images )</h5>
                 <% else %>
-                  ( <%= album.pictures.count %> image )</h4>
+                  ( <%= album.pictures.count %> image )</h5>
                 <% end %>
             <% end %>
           </div>
