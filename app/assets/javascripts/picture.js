@@ -14,7 +14,8 @@ $(document).ready(function() {
           title : { type : 'inside' }
         }, // helpers
         beforeShow : function() {
-          this.title = (this.index + 1) + ' / ' + this.group.length + ' | ' + (this.title ? '' + this.title + '' : '');
+          this.title = "( " + (this.index + 1) + ' / ' + this.group.length + " )" + '<br>' + (this.title ? '' + this.title + '' : '');
+          // this.title = "( " + (this.index + 1) + ' / ' + this.group.length + " )" + '<center>' + (this.title ? '' + this.title + '' : '') + '</center>';
         } // beforeShow
     }); //fancybox
   // } // if

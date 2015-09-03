@@ -98,6 +98,20 @@ h4, h5 {
   text-align: center;
 }
 
+
+h3 {
+  font-size: 16px;
+}
+
+.fancybox-title {
+  visibility: hidden;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+
+
 // Vertical Nav bar
 
 .nav {
@@ -111,7 +125,18 @@ h4, h5 {
   background-color: white;
 }
 
+
+@media (min-width: 768px) and (max-width: 1104px) {
+
+
+}
+
 @media (min-width: 768px) {
+
+  .sidebar-nav {
+    position:fixed;
+    width:inherit;
+  }
 
   .navbar-header {
     float: none;
