@@ -114,7 +114,7 @@ h4, h5 {
 @media (min-width: 768px) {
 
   .navbar-header {
-    float: none;
+    float: none !important;
   }
 
   .sidebar-nav .navbar .navbar-collapse {

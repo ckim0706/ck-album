@@ -21,7 +21,6 @@ gem 'gretel'
 gem "autoprefixer-rails"
 
 group :development, :test do
-  gem 'puma'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
